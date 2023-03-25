@@ -8,7 +8,8 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop"},
+    ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer"},
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
@@ -17,7 +18,7 @@ return {
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
+    -- ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
