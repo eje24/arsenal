@@ -1,10 +1,5 @@
 return {
   {
-    "kkoomen/vim-doge",
-    as = "vim-doge",
-    build = ":call doge#install()"
-  },
-  {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function() require("catppuccin").setup {} end,
@@ -88,5 +83,10 @@ return {
 
       require("neoscroll.config").set_mappings(t)
     end,
+  },
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
   },
 }

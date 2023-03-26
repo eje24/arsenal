@@ -19,7 +19,7 @@ return {
       desc = "Pick to close",
     },
     ["<leader>lg"] = {
-      "<cmd>:DogeGenerate<cr>",
+      function() require("neogen").generate() end,
       desc = "Generate Docstring",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
