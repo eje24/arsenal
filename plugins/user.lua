@@ -1,5 +1,10 @@
 return {
   {
+    "kkoomen/vim-doge",
+    as = "vim-doge",
+    build = ":call doge#install()"
+  },
+  {
     "catppuccin/nvim",
     as = "catppuccin",
     config = function() require("catppuccin").setup {} end,

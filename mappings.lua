@@ -8,13 +8,19 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop"},
-    ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer"},
+    ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
+    ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(
+          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
+        )
       end,
       desc = "Pick to close",
+    },
+    ["<leader>lg"] = {
+      "<cmd>:DogeGenerate<cr>",
+      desc = "Generate Docstring",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
