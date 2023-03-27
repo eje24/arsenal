@@ -8,7 +8,7 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
+    ["<leader>j"] = { "<cmd>:HopChar2<cr>", desc = "Hop" },
     ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer" },
     ["<leader>bD"] = {
       function()
