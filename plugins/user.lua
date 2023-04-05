@@ -4,10 +4,10 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
   },
   {
     "catppuccin/nvim",
@@ -66,14 +66,14 @@ return {
           "zz",
           "zb",
         },
-        hide_cursor = true,          -- Hide cursor while scrolling
-        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+        hide_cursor = true, -- Hide cursor while scrolling
+        stop_eof = true, -- Stop at <EOF> when scrolling downwards
+        respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
         cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-        easing_function = "cubic",   -- Default easing function
-        pre_hook = nil,              -- Function to run before the scrolling animation starts
-        post_hook = nil,             -- Function to run after the scrolling animation ends
-        performance_mode = false,    -- Disable "Performance Mode" on all buffers.
+        easing_function = "cubic", -- Default easing function
+        pre_hook = nil, -- Function to run before the scrolling animation starts
+        post_hook = nil, -- Function to run after the scrolling animation ends
+        performance_mode = false, -- Disable "Performance Mode" on all buffers.
       }
 
       local t = {}
@@ -98,5 +98,15 @@ return {
     "danymat/neogen",
     dependencies = "nvim-treesitter/nvim-treesitter",
     config = true,
+  },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function() require("copilot").setup {
+      suggestion = {
+        auto_trigger = true
+      }
+    } end,
   },
 }

@@ -10,14 +10,6 @@ return {
     -- mappings seen under group name "Buffer"
     ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
     ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(
-          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-        )
-      end,
-      desc = "Pick to close",
-    },
     ["<leader>lg"] = {
       function() require("neogen").generate() end,
       desc = "Generate Docstring",
