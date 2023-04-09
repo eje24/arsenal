@@ -14,6 +14,11 @@ return {
       function() require("neogen").generate() end,
       desc = "Generate Docstring",
     },
+    ["<leader>tt"] = { "<C-w><C-s><cmd>:terminal<cr>" },
+    ["<leader>[["] = {
+      "<cmd>:cd -<cr>",
+      desc = "Go back in cd",
+    },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },
@@ -22,8 +27,7 @@ return {
   },
   t = {
     -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
+    ["<esc>"] = { "<C-\\><C-n>" },
   },
-  i = {
-  }
+  i = {},
 }
