@@ -14,10 +14,14 @@ return {
       function() require("neogen").generate() end,
       desc = "Generate Docstring",
     },
-    ["<leader>tt"] = { "<C-w><C-s><cmd>:terminal<cr>" },
+    ["<leader>tt"] = { "<cmd>:terminal<cr>", desc = "open current as terimnal" },
     ["<leader>[["] = {
       "<cmd>:cd -<cr>",
       desc = "Go back in cd",
+    },
+    ["<leader>pp"] = {
+      "<cmd>:Telescope projects<cr>",
+      desc = "Telescope projects",
     },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
