@@ -122,4 +122,8 @@ return {
       require("telescope").load_extension("projects")
     end,
   },
+  {
+    "gcmt/wildfire.vim",
+    lazy=false
+  }
 }
