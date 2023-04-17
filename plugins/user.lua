@@ -10,16 +10,6 @@ return {
     end,
   },
   {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    config = function() require("catppuccin").setup {} end,
-  },
-  {
-    "folke/tokyonight.nvim",
-    as = "tokyonight",
-    config = function() require("tokyonight").setup {} end,
-  },
-  {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function() require("hop").setup {} end,
@@ -66,14 +56,14 @@ return {
           "zz",
           "zb",
         },
-        hide_cursor = true,          -- Hide cursor while scrolling
-        stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-        respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+        hide_cursor = true, -- Hide cursor while scrolling
+        stop_eof = true, -- Stop at <EOF> when scrolling downwards
+        respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
         cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-        easing_function = "cubic",   -- Default easing function
-        pre_hook = nil,              -- Function to run before the scrolling animation starts
-        post_hook = nil,             -- Function to run after the scrolling animation ends
-        performance_mode = false,    -- Disable "Performance Mode" on all buffers.
+        easing_function = "cubic", -- Default easing function
+        pre_hook = nil, -- Function to run before the scrolling animation starts
+        post_hook = nil, -- Function to run after the scrolling animation ends
+        performance_mode = false, -- Disable "Performance Mode" on all buffers.
       }
 
       local t = {}
@@ -119,11 +109,21 @@ return {
     lazy = false,
     config = function()
       require("project_nvim").setup {}
-      require("telescope").load_extension("projects")
+      require("telescope").load_extension "projects"
     end,
   },
+  { "gcmt/wildfire.vim", lazy = false },
+  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   {
-    "gcmt/wildfire.vim",
-    lazy=false
-  }
+    "catppuccin/nvim",
+    as = "catppuccin",
+    lazy = false,
+    config = function() require("catppuccin").setup {} end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    as = "tokyonight",
+    lazy = false,
+    config = function() require("tokyonight").setup {} end,
+  },
 }
