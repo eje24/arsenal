@@ -129,6 +129,6 @@ return {
   {
     "nvim-pack/nvim-spectre",
     as = "spectre",
-    lazy = false
+    lazy = false,
   }
 }
