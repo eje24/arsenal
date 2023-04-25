@@ -23,6 +23,10 @@ return {
       "<cmd>:Telescope projects<cr>",
       desc = "Telescope projects",
     },
+    ["<leader>fR"] = {
+      "<cmd>lua require("spectre").open()<CR>",
+      desc = "Spectre search & replace",
+    }
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },

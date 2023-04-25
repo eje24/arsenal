@@ -126,4 +126,9 @@ return {
     lazy = false,
     config = function() require("tokyonight").setup {} end,
   },
+  {
+    "nvim-pack/nvim-spectre",
+    as = "spectre",
+    lazy = false
+  }
 }
