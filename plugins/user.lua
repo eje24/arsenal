@@ -121,12 +121,6 @@ return {
     config = function() require("catppuccin").setup {} end,
   },
   {
-    "folke/tokyonight.nvim",
-    as = "tokyonight",
-    lazy = false,
-    config = function() require("tokyonight").setup {} end,
-  },
-  {
     "nvim-pack/nvim-spectre",
     as = "spectre",
     lazy = false,
@@ -147,8 +141,9 @@ return {
     end,
   },
   {
-    "AlexvZyl/nordic.nvim",
-    as = "nordic",
-    config = function() require("nordic").setup() end,
+    "folke/tokyonight.nvim",
+    as = "tokyonight",
+    lazy = false,
+    config = function() require("tokyonight").setup {} end,
   },
 }
