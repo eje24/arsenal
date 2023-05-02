@@ -27,15 +27,20 @@ return {
       function() require("spectre").open() end,
       desc = "Spectre search & replace",
     },
+    ["<leader>\\"] = { "<C-w>v"},
+    ["<leader>-"] = { "<C-w>s"},
+    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["H"] = { "<cmd>:bprevious<cr>"},
+    ["L"] = { "<cmd>:bnext<cr>"},
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it
     ["<esc>"] = { "<C-\\><C-n>" },
   },
-  i = {},
+  i = {
+    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },  -- change description but the same command
+  },
 }
