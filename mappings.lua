@@ -32,6 +32,8 @@ return {
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },  -- change description but the same command
     ["H"] = { "<cmd>:bprevious<cr>"},
     ["L"] = { "<cmd>:bnext<cr>"},
+    ["q"] = { "<cmd>:q<cr>"},
+    ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },
