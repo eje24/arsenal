@@ -33,9 +33,7 @@ return {
     ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
     ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
     ["q"] = { "<cmd>:q<cr>", desc = "Quit"},
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    -- ["<leader>b"] = { name = "Buffers" },
+    ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal"}
   },
   t = {
     -- setting a mapping to false will disable it
