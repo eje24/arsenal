@@ -27,11 +27,12 @@ return {
       function() require("spectre").open() end,
       desc = "Spectre search & replace",
     },
-    ["<leader>\\"] = { "<C-w>v"},
-    ["<leader>-"] = { "<C-w>s"},
-    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["H"] = { "<cmd>:bprevious<cr>"},
-    ["L"] = { "<cmd>:bnext<cr>"},
+    ["<leader>\\"] = { "<C-w>v", desc = "Vertical Split" },
+    ["<leader>-"] = { "<C-w>s", desc = "Horizontal Split" },
+    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
+    ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
+    ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
+    ["q"] = { "<cmd>:q<cr>", desc = "Quit"},
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     -- ["<leader>b"] = { name = "Buffers" },
@@ -41,6 +42,6 @@ return {
     ["<esc>"] = { "<C-\\><C-n>" },
   },
   i = {
-    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
   },
 }
