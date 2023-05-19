@@ -32,7 +32,7 @@ return {
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
     ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
     ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
-    ["q"] = { "<cmd>:q<cr>", desc = "Quit"},
+    ["z"] = { "<cmd>:q<cr>", desc = "Quit"},
     ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal"}
   },
   t = {
