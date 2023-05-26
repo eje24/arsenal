@@ -3,6 +3,7 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+
 return {
   -- first key is the mode
   n = {
@@ -16,7 +17,7 @@ return {
     },
     ["<leader>tt"] = { "<cmd>:terminal<cr>", desc = "open current as terimnal" },
     ["<leader>[["] = {
-      "<cmd>:cd -<cr>",
+      "<cmd>:cd - <cr>",
       desc = "Go back in cd",
     },
     ["<leader>pp"] = {
@@ -32,7 +33,7 @@ return {
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
     ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
     ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
-    ["z"] = { "<cmd>:q<cr>", desc = "Quit"},
+    ["<leader>q"] = { "<cmd>:q<cr>", desc = "Quit"},
     ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal"}
   },
   t = {
