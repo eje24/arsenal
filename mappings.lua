@@ -31,10 +31,16 @@ return {
     ["<leader>\\"] = { "<C-w>v", desc = "Vertical Split" },
     ["<leader>-"] = { "<C-w>s", desc = "Horizontal Split" },
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
-    ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
-    ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
-    ["<leader>q"] = { "<cmd>:q<cr>", desc = "Quit"},
-    ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal"}
+    ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer" },
+    ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer" },
+    ["<leader>q"] = { "<cmd>:q<cr>", desc = "Quit" },
+    ["<leader>gY"] = {
+      function()
+        require("gitlinker").get_repo_url({ action_callback = require("gitlinker.actions").open_in_browser })
+      end,
+      desc = "Open Repo In Browser",
+    },
+    ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal" },
   },
   t = {
     -- setting a mapping to false will disable it
