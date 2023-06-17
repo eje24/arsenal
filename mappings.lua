@@ -9,16 +9,15 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
+    [';'] = { "<cmd>:HopWord<cr>", desc = "Hop" },
+    ["\\"] = { "<C-w>v", desc = "Vertical Split" },
+    ["-"] = { "<C-w>s", desc = "Horizontal Split" },
+    ["<tab>"] = { "<cmd>:q<cr>", desc = "Quit"},
+    ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
+    ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
+
     ["<leader>;"] = { "<cmd>:edit!<cr>", desc = "Reload buffer" },
-    ["<leader>lg"] = {
-      function() require("neogen").generate() end,
-      desc = "Generate Docstring",
-    },
     ["<leader>tt"] = { "<cmd>:terminal<cr>", desc = "open current as terimnal" },
-    ["<leader>[["] = {
-      "<cmd>:cd -<cr>",
-      desc = "Go back in cd",
-    },
     ["<leader>pp"] = {
       "<cmd>:Telescope projects<cr>",
       desc = "Telescope projects",
@@ -27,12 +26,7 @@ return {
       function() require("spectre").open() end,
       desc = "Spectre search & replace",
     },
-    ["<leader>\\"] = { "<C-w>v", desc = "Vertical Split" },
-    ["<leader>-"] = { "<C-w>s", desc = "Horizontal Split" },
-    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
-    ["H"] = { "<cmd>:bprevious<cr>", desc = "Prev Buffer"},
-    ["L"] = { "<cmd>:bnext<cr>", desc = "Next Buffer"},
-    ["z"] = { "<cmd>:q<cr>", desc = "Quit"},
+    ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" },
     ["<leader>'"] = { "<C-w>s<cmd>:terminal<cr>", desc = "Quick Terminal"}
   },
   t = {

@@ -12,7 +12,11 @@ return {
   {
     "phaazon/hop.nvim",
     event = "BufRead",
-    config = function() require("hop").setup {} end,
+    config = function()
+      require("hop").setup {
+        multi_windows = true,
+      }
+    end,
   },
   {
     "ruifm/gitlinker.nvim",
@@ -40,11 +44,6 @@ return {
     end,
   },
   {
-    "danymat/neogen",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    config = true,
-  },
-  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
@@ -68,13 +67,6 @@ return {
     end,
   },
   { "gcmt/wildfire.vim", lazy = false },
-  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
-  {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    lazy = false,
-    config = function() require("catppuccin").setup {} end,
-  },
   {
     "nvim-pack/nvim-spectre",
     as = "spectre",
@@ -100,5 +92,12 @@ return {
     as = "tokyonight",
     lazy = false,
     config = function() require("tokyonight").setup {} end,
+  },
+  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
+  {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    lazy = false,
+    config = function() require("catppuccin").setup {} end,
   },
 }
