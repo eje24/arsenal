@@ -100,6 +100,16 @@ return {
     lazy = false,
     config = function() require("catppuccin").setup {} end,
   },
+  {
+    "yorickpeterse/nvim-window",
+    as = "nvim-window",
+    lazy = false,
+  },
+  {
+    "eandrju/cellular-automaton.nvim",
+    as = "cellular-automaton",
+    lazy = false,
+  },
   { "ellisonleao/gruvbox.nvim", lazy = false },
   { "EdenEast/nightfox.nvim", lazy = false }, -- lazy
   { "sainnhe/sonokai", lazy = false },
