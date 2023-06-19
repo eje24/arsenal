@@ -100,4 +100,10 @@ return {
     lazy = false,
     config = function() require("catppuccin").setup {} end,
   },
+  { "ellisonleao/gruvbox.nvim", lazy = false },
+  { "EdenEast/nightfox.nvim", lazy = false }, -- lazy
+  { "sainnhe/sonokai", lazy = false },
+  { "sainnhe/edge", lazy = false },
+  { "sainnhe/everforest", lazy = false },
+  { "sainnhe/gruvbox-material", lazy = false },
 }
