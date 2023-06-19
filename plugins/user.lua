@@ -88,19 +88,6 @@ return {
     end,
   },
   {
-    "folke/tokyonight.nvim",
-    as = "tokyonight",
-    lazy = false,
-    config = function() require("tokyonight").setup {} end,
-  },
-  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
-  {
-    "catppuccin/nvim",
-    as = "catppuccin",
-    lazy = false,
-    config = function() require("catppuccin").setup {} end,
-  },
-  {
     "yorickpeterse/nvim-window",
     as = "nvim-window",
     lazy = false,
@@ -110,10 +97,19 @@ return {
     as = "cellular-automaton",
     lazy = false,
   },
+
   { "ellisonleao/gruvbox.nvim", lazy = false },
   { "EdenEast/nightfox.nvim", lazy = false }, -- lazy
-  { "sainnhe/sonokai", lazy = false },
-  { "sainnhe/edge", lazy = false },
-  { "sainnhe/everforest", lazy = false },
-  { "sainnhe/gruvbox-material", lazy = false },
+  {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    lazy = false,
+    config = function() require("catppuccin").setup {} end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    as = "tokyonight",
+    lazy = false,
+    config = function() require("tokyonight").setup {} end,
+  },
 }
