@@ -21,7 +21,11 @@ return {
       function() require("nvim-window").pick() end,
       desc = "pick window",
     },
-    ['<leader>fml'] = {
+    [","] = {
+      function() require("telescope.builtin").find_files { hidden = true, no_ignore = true } end,
+      desc = "Find all files",
+    },
+    ["<leader>fml"] = {
       "<cmd>CellularAutomaton make_it_rain<cr>",
       desc = "Fuck my life",
     },
