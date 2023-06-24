@@ -9,7 +9,6 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>j"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
     [";"] = { "<cmd>:HopWord<cr>", desc = "Hop" },
     ["\\"] = { "<C-w>v", desc = "Vertical Split" },
     ["-"] = { "<C-w>s", desc = "Horizontal Split" },
@@ -21,7 +20,8 @@ return {
       function() require("nvim-window").pick() end,
       desc = "pick window",
     },
-    [","] = {
+    [","] = { function() require("telescope.builtin").live_grep() end, desc = "Find words" },
+    ["="] = {
       function() require("telescope.builtin").find_files { hidden = true, no_ignore = true } end,
       desc = "Find all files",
     },
