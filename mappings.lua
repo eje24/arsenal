@@ -45,6 +45,7 @@ return {
   t = {
     -- setting a mapping to false will disable it
     ["<esc>"] = { "<C-\\><C-n>" },
+    ["<C-j>"] = { "<cmd>:q!<cr>", desc="quit"}
   },
   i = {
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
