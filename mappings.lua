@@ -44,7 +44,6 @@ return {
   },
   t = {
     ["<esc>"] = { "<C-\\><C-n>" },
-    ["<tab>"] = { "<cmd>:q!<cr>", desc="quit and clean buffer"}
   },
   i = {
     ["<C-s>"] = { "<cmd>:w!<cr>", desc = "Save File" }, -- change description but the same command
