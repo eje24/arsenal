@@ -99,7 +99,6 @@ return {
   },
 
   { "ellisonleao/gruvbox.nvim", lazy = false },
-  { "EdenEast/nightfox.nvim", lazy = false }, -- lazy
   {
     "catppuccin/nvim",
     as = "catppuccin",
