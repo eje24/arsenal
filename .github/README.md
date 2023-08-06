@@ -14,5 +14,5 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 # install astronvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 # overlay my stuff
-git clone https://github.com/eje24/Arsenal/ ~/.config/nvim/lua/user
+git clone https://github.com/eje24/arsenal ~/.config/nvim/lua/user
 ```
